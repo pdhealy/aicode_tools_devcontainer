@@ -20,7 +20,7 @@
 	"containerEnv": {
 		"OLLAMA_HOST": "http://host.docker.internal:11434"
 	},
-	"postStartCommand": "sudo install -d -m 0755 -o vscode -g vscode /home/vscode/.ollama /home/vscode/.ollama/models"
+	"postStartCommand": "sudo install -d -m 0755 -o vscode -g vscode /home/vscode/.ollama /home/vscode/.ollama/models && NODE=$(ls /vscode/vscode-server/bin/linux-*/*/node 2>/dev/null | head -1 || true) && [ -n \"$NODE\" ] && sudo ln -sf \"$NODE\" /usr/local/bin/node"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
