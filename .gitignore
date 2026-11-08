@@ -1,1 +1,21 @@
 logs/
+
+# Operating-system metadata
+.DS_Store
+
+# Local environment and tool configuration
+.env
+.env.*
+!.env.example
+*.local
+.claude/settings.local.json
+
+# Credentials, secrets, and private keys
+credentials.json
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
